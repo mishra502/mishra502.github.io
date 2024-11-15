@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Code Quiz</title>
+    <style>
+        .hide { display: none; }
+    </style>
+</head>
+
+<body>
+    <div class="containerNew">
+
+        <!-- Login Page -->
+        <div id="login-page">
+            <h2>Login to Start the Quiz</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required />
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" required />
+                
+                <button type="submit" id="login-btn">Login</button>
+            </form>
+            <p id="login-error" class="hide" style="color: red;">Invalid username or password. Please try again.</p>
+        </div>
+
+        <!-- Quiz Page (initially hidden) -->
+        <div id="quiz-container" class="hide">
+            <header>
+                <div>
+                    <a href="./highscores.html">
+                        <button class="scores-header" id="view-high-scores">
+                            View High Scores
+                        </button>
+                    </a>
+                </div>
+
+                <div class="timer">
+                    <p>Time: <span id="timer">0</span></p>
+                </div>
+            </header>
+
+            <main class="quiz">
+                <div id="quiz-start">
+                    <div class="landing" id="start-screen">
+                        <h1 id="top">Online Quiz</h1>
+                        <h1>Timer Quiz Challenge</h1>
+                        <p>
+                            Try to answer the following code-related questions within the time limit.
+                            Keep in mind that incorrect answers will penalize your score/time by ten seconds!
+                        </p>
+                        <button id="start">Start Quiz</button>
+                    </div>
+                </div>
+
+                <div class="hide" id="questions">
+                    <h2 id="question-words"></h2>
+                    <div class="options" id="options"></div>
+                </div>
+
+                <div class="hide" id="quiz-end">
+                    <h2>All Done!</h2>
+                    <p>Your final score is: <span id="score-final"></span></p>
+                    <p>
+                        Please enter your name:
+                        <input type="text" id="name" max="3" />
+                        <button id="submit-score">Submit</button>
+                    </p>
+                </div>
+
+                <div id="feedback" class="feedback hide"></div>
+            </main>
+        </div>
+    </div>
+    
+    <script>
+        // Handle the login functionality
+        const loginForm = document.getElementById("login-form");
+        const loginPage = document.getElementById("login-page");
+        const quizContainer = document.getElementById("quiz-container");
+        const loginError = document.getElementById("login-error");
+
+        loginForm.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Fetch login input values
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Check credentials (for demonstration, use hardcoded values)
+            if (username === "user" && password === "pass123") {
+                // Hide login and show quiz if credentials are valid
+                loginPage.classList.add("hide");
+                quizContainer.classList.remove("hide");
+            } else {
+                // Show error message
+                loginError.classList.remove("hide");
+            }
+        });
+
+        // Your existing quiz JavaScript goes here...
+    </script>
+
+    <!-- Link the external JavaScript file with the correct .js extension for the quiz functionality -->
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+/* Global Styles */
+* {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000; /* Set background color to black */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerNew {
+    border: 3px solid #52865a;
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #1a1f4b; /* Dark blue background */
+    color: #ffffff; /* Light text color for contrast */
+    transition: all 0.3s ease-in-out;
+}
+
+/* General Styling for Containers */
+.quiz,
+.scores {
+    margin: 30px auto;
+    max-width: 90%;
+}
+
+/* Login Page Styling */
+#login-page {
+    text-align: center;
+}
+
+#login-page h2 {
+    color: #a9c4f8; /* Light blue for headings */
+    margin-bottom: 20px;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+#login-form label {
+    font-size: 1rem;
+    color: #cfcfcf; /* Light color for labels */
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#login-btn {
+    width: 80%;
+    padding: 12px;
+    background-color: #52865a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#login-btn:hover {
+    background-color: #2a8d12;
+}
+
+#login-error {
+    color: red;
+    font-size: 0.9rem;
+}
+
+/* Header Styles */
+.scores-header {
+    font-size: 1rem;
+    padding: 10px;
+    background-color: #4B0082;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.scores-header:hover {
+    background-color: #372657;
+}
+
+/* Timer Styles */
+.timer {
+    font-size: 1.2rem;
+    color: #a9c4f8; /* Light blue for timer */
+    margin-top: 5px;
+    text-align: right;
+}
+
+/* Landing Page */
+.landing {
+    text-align: center;
+}
+
+#top {
+    color: green;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #52865a;
+    border-radius: 5px;
+    border: 0;
+    padding: 12px 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2a8d12;
+}
+
+.options button {
+    display: block;
+    width: 100%;
+}
+
+/* Feedback Message */
+.feedback {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    padding-top: 15px;
+    color: #fff;
+    background-color: #4B0082;
+    border-top: 2px solid #4B0082;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Form Inputs */
+input[type="text"] {
+    font-size: 1rem;
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* List Styles */
+ol {
+    padding-left: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #2a335b; /* Darker blue for list background */
+    color: #ffffff; /* Light color for list text */
+}
+
+li {
+    padding: 10px;
+    list-style: decimal inside none;
+    background-color: #3b456f; /* Darker blue for list items */
+    border-bottom: 1px solid #4a527b;
+}
+
+li:nth-child(odd) {
+    background-color: #2e3866;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .containerNew {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .containerNew {
+        width: 95%;
+    }
+
+    .quiz,
+    .scores {
+        max-width: 100%;
+    }
+}
+
+
